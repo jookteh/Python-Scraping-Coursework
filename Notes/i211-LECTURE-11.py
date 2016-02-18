@@ -1,6 +1,9 @@
 import urllib.request, random
+import webbrowser
 
 def link_finder(page):
+
+    print("Jumping from :" , page)
 
     webpage = urllib.request.urlopen(page)
     line = webpage.read().decode(errors="replace")
@@ -14,15 +17,18 @@ def link_finder(page):
             item = item.split("\"")
             if len(item) > 1:
                 html.append(item[1])
-    return html
+
+
+    new = "http://en.wikipedia.org" + random.choice(html)
+    webbrowser.open_new_tab(new)
+    print("To :", new)
+
+    return new
+
 
 baseurl = input("Where would you like to start? ")
 jumps = int(input("How many jumps? "))
-html = link_finder(baseurl)
+
 
 for i in range(jumps):
-    print("Jumping from :" , baseurl)
-    new = "http://en.wikipedia.org" + random.choice(html)
-
-    print("To :", new)
-    baseurl = new
+    baseurl = link_finder(baseurl)
