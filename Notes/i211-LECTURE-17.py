@@ -69,31 +69,34 @@
 # out.write(html)
 # out.close()
 
-import re
-import urllib.request, random
+# import re
+# import urllib.request, random
+#
+# #out = open("template2.html","r+")
+# #print(out)
+#
+# webpage = urllib.request.urlopen("http://bloomington.in.gov/sections/viewSection.php?section_id=170")
+# outLines = webpage.read().decode(errors="replace")
+#
+# # outLines = out.read()
+#
+# row = outLines.split("<tr")
+# returnArray = []
+#
+# for elem in row:
+#     tempArray = re.findall("\<td[\w]*\>.*\<\/td\>", elem)
+#     returnTemp = []
+#     for elem_2 in tempArray:
+#         returnTemp.append(elem_2[4:-5])
+#     if len(returnTemp) != 0:
+#         returnArray.append(returnTemp)
+#
+# print(returnArray)
 
-#out = open("template2.html","r+")
-#print(out)
+# print(re.findall("\<tr[\w]*\> [\w]* \</tr\>", outLines))
 
-webpage = urllib.request.urlopen("http://bloomington.in.gov/sections/viewSection.php?section_id=170")
-outLines = webpage.read().decode(errors="replace")
 
-# outLines = out.read()
 
-row = outLines.split("<tr")
-returnArray = []
-
-for elem in row:
-    tempArray = re.findall("\<td[\w]*\>.*\<\/td\>", elem)
-    returnTemp = []
-    for elem_2 in tempArray:
-        returnTemp.append(elem_2[4:-5])
-    if len(returnTemp) != 0:
-        returnArray.append(returnTemp)
-
-print(returnArray)
-
-#print(re.findall("\<tr[\w]*\> [\w]* \</tr\>", outLines))
 
 
 
