@@ -16,4 +16,11 @@ html = """
     </body>
 </html>"""
 
-print(html.format(content = int(form.getfirst('firstNum','Who are you?')) + int(form.getfirst('secondNum','Who are you?'))))
+
+addedUp = 0
+splitArray = form.getfirst('somethingThingsInArea','Who are you?').split("\r\n")
+
+for num in splitArray:
+    addedUp+=int(num)
+
+print(html.format(content = addedUp))
