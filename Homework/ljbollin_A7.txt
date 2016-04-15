@@ -1,9 +1,7 @@
-Varun Ganapathy
+Liam Bolling
 Team 123
 
-
-Singer Table:
-
+--Singer Table--
 CREATE TABLE Singer
 (SingerID INT(11) UNIQUE,
 FirstName varchar(30),
@@ -12,8 +10,7 @@ Label varchar(30),
 Salary INT(11),
 Style varchar(30));
 
-Tour Table:
-
+--Tour Table--
 CREATE TABLE Tour
 (TourID INT(11) UNIQUE,
 TourName varchar(30),
@@ -21,13 +18,11 @@ Begin date,
 End date,
 Headliner INT(11));
 
-Insert Statment:
-
+--Insert Statment--
 INSERT INTO Singer
 Values (1, 'Gucci', 'Mane', '1017 Bricksquad', 1000000, 'Hip-Hop');
 
-Select Statment:
-
+--Select Statment--
 Select FirstName, LastName
 From Singer
 Where Salary >= 100000 AND
