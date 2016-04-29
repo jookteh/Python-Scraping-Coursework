@@ -1,3 +1,6 @@
+# Liam Bolling
+# Group 123
+
 #! /usr/bin/env python
 
 import MySQLdb
